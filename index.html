@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buat Voucher</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="script.js"></script>
+</head>
+<body>
+  <h2>🧾 Buat Voucher Baru</h2>
+  <form id="formVoucher" onsubmit="event.preventDefault(); buatVoucher();">
+    <label for="kode">Kode Voucher:</label>
+    <input type="text" id="kode" required>
+
+    <label for="potongan">Potongan Harga (contoh: 2000):</label>
+    <input type="number" id="potongan" required>
+
+    <label for="produk">Voucher Hanya Untuk Produk (opsional):</label>
+    <select id="produk">
+      <option value="">Semua Produk</option>
+      <option value="canva">Canva Pro 1 Bulan</option>
+      <option value="alight">Alight Motion Premium</option>
+      <option value="am1thn">AM Premium 1 Tahun Sharing</option>
+    </select>
+
+    <label for="userId">User ID Khusus (opsional):</label>
+    <input type="text" id="userId">
+
+    <label for="expired">Tanggal Kadaluarsa:</label>
+    <input type="datetime-local" id="expired" required>
+
+    <button type="submit">Buat Voucher</button>
+  </form>
+</body>
+</html>
